@@ -1,0 +1,7 @@
+DECLARE
+v_phone_no VARCHAR2(200) default '8006330575';
+BEGIN
+format_phone(v_phone_no);
+DBMS_OUTPUT.PUT_LINE('phone: ' || v_phone_no);
+END;
+/

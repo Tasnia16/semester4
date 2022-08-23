@@ -1,0 +1,23 @@
+drop table phone1;
+drop table phone2;
+
+create table phone1
+( 
+  id int,
+  phone_number varchar(100)
+);
+
+create table phone2
+(
+ new_id int,
+ n_phone_no varchar(10)
+);
+insert into phone1 values(1,'122345');
+insert into phone1 values(2,'353465');
+insert into phone1 values(3,'555555');
+insert into phone1 values(4,'122665');
+
+
+
+
+

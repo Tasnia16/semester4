@@ -1,0 +1,14 @@
+DECLARE
+vr_employee employees%ROWTYPE;
+BEGIN
+SELECT * 
+INTO vr_employee
+from employees
+where employee_id=&em_id;
+DBMS_OUTPUT.PUT_LINE(vr_employee.first_name || vr_employee.salary*12*10/100 ||' '|| nvl(vr_employee.commission_pct,0));
+EXCEPTION
+WHEN no_data_found
+then
+raise_application_error(-2001,'the student');
+END;
+/

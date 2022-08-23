@@ -1,0 +1,18 @@
+
+
+declare
+cursor c_zip is
+select *
+from employees;
+vr_zip c_zip%ROWTYPE;
+begin
+open c_zip;
+loop
+fetch c_zip into vr_zip
+where employee_id=&em_id;
+exit when c_zip%notfound;
+
+dbms_output.put_line(vr_zip.employee_id);
+end loop;
+end;
+/

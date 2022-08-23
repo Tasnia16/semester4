@@ -1,0 +1,11 @@
+declare 
+v_phone varchar (100);
+begin
+select phone_number into v_phone
+from phone1 where id=1 ;
+
+format_phone(v_phone);
+insert into phone2(new_id,n_phone_no)
+values(1,v_phone);
+END;
+/
