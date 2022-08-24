@@ -1,0 +1,19 @@
+declare
+v_name varchar(200);
+v_id varchar(20);
+
+begin
+select first_name, employee_id 
+into v_name, v_id 
+from employees
+where employee_id=16676;
+
+dbms_output.put_line (v_name ||' '||v_id);
+
+exception
+when no_data_found then
+dbms_output.put_line('nai kisu');
+
+end;
+/
+
